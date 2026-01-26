@@ -1,0 +1,59 @@
+:root {
+  /* Основные цвета тем */
+  --light-layout-bg: #ffffff;
+  --dark-layout-bg: #121212;
+
+  /* Цвета layout (header, main, footer) */
+  --light-main-bg: #f8f9fa;
+  --dark-main-bg: #1e1e1e;
+
+  /* Цвета секций внутри layout */
+  --light-section-bg: #ffffff;
+  --dark-section-bg: #2d2d2d;
+
+  /* Цвета заголовков */
+  --light-heading-color: #1a1a1a;
+  --dark-heading-color: #f0f0f0;
+
+  /* Цвета текста */
+  --light-text-color: #333333;
+  --dark-text-color: #e0e0e0;
+
+  /* Цвета границ */
+  --light-border-color: #dddddd;
+  --dark-border-color: #444444;
+
+  /* Размеры шрифтов заголовков */
+  --h1-font-size: 2.5rem; /* 40px */
+  --h2-font-size: 2rem; /* 32px */
+  --h3-font-size: 1.75rem; /* 28px */
+  --h4-font-size: 1.5rem; /* 24px */
+  --h5-font-size: 1.25rem; /* 20px */
+  --h6-font-size: 1rem; /* 16px */
+
+  /* Размер шрифта параграфов */
+  --p-font-size: 1rem; /* 16px */
+
+  /* Цвета кнопок */
+  --light-btn-bg: #007bff;
+  --dark-btn-bg: #1a6bc4;
+
+  --light-btn-color: #ffffff;
+  --dark-btn-color: #f0f0f0;
+
+  --light-btn-border-color: #007bff;
+  --dark-btn-border-color: #1a6bc4;
+
+  /* Цвета кнопок (дополнительные) */
+  --light-disabled-btn-bg: #cccccc;
+  --dark-disabled-btn-bg: #555555;
+
+  --light-disabled-btn-color: #666666;
+  --dark-disabled-btn-color: #888888;
+
+  --light-disabled-btn-border-color: #aaaaaa;
+  --dark-disabled-btn-border-color: #666666;
+
+  /* Размер шрифта кнопки */
+  --btn-font-size: 1rem; /* 16px */
+}

@@ -1,0 +1,32 @@
+.button {
+  padding: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  white-space: nowrap;
+  font-size: var(--btn-font-size);
+  line-height: 1;
+}
+
+.button--light {
+  border-color: var(--light-btn-border-color);
+  background-color: var(--light-btn-bg);
+  color: var(--light-btn-color);
+}
+
+.button--dark {
+  border-color: var(--dark-btn-border-color);
+  background-color: var(--dark-btn-bg);
+  color: var(--dark-btn-color);
+}
+
+.button--light--disabled {
+  border-color: var(--light-disabled-btn-border-color);
+  background-color: var(--light-disabled-btn-bg);
+  color: var(--light-disabled-btn-color);
+}
+
+.button--dark--disabled {
+  border-color: var(--dark-disabled-btn-border-color);
+  background-color: var(--dark-disabled-btn-bg);
+  color: var(--dark-disabled-btn-color);
+}
