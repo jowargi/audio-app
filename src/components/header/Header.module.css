@@ -1,0 +1,38 @@
+.header {
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  margin: 1rem;
+}
+
+.header--light {
+  border-color: var(--light-border-color);
+  background-color: var(--light-main-bg);
+}
+
+.header--dark {
+  border-color: var(--dark-border-color);
+  background-color: var(--dark-main-bg);
+}
+
+.title {
+  float: left;
+  font-size: var(--h1-font-size);
+  cursor: pointer;
+}
+
+.title--light {
+  color: var(--light-heading-color);
+}
+
+.title--dark {
+  color: var(--dark-heading-color);
+}
+
+.container {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
+}

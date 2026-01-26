@@ -1,0 +1,9 @@
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}

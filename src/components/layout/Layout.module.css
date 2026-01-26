@@ -1,0 +1,12 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout--light {
+  background-color: var(--light-layout-bg);
+}
+
+.layout--dark {
+  background-color: var(--dark-layout-bg);
+}

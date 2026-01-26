@@ -1,0 +1,16 @@
+.main {
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0 1rem;
+}
+
+.main--light {
+  border-color: var(--light-border-color);
+  background-color: var(--light-main-bg);
+}
+
+.main--dark {
+  border-color: var(--dark-border-color);
+  background-color: var(--dark-main-bg);
+}
