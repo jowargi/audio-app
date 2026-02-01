@@ -3,13 +3,18 @@ import {
   createSlice,
   type EntityState,
 } from "@reduxjs/toolkit";
+import { z } from "zod";
 
-export interface User {
-  id: string;
-  name: string;
-}
+export const userSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+});
 
-const authorizedUsersAdapter = createEntityAdapter({
+export const usersArraySchema = z.array(userSchema);
+
+export type User = z.infer<typeof userSchema>;
+
+const authorizedUsersAdapter = createEntityAdapter<User, string>({
   selectId: (user: User): string => user.id,
 });
 

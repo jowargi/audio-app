@@ -1,9 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Layout from "../layout/Layout";
 import { Provider } from "react-redux";
 import { store } from "../../redux/store";
 import AuthorizedUserIdContextProvider from "../authorizedUserIdContextProvider/AuthorizedUserIdContextProvider";
 import ThemeColorContextProvider from "../themeColorContextProvider/ThemeColorContextProvider";
+import HeadphonesPageRedirect from "../../redirects/HeadphonesPageRedirect";
+import HeadphonesPage from "../../pages/headphones/HeadphonesPage";
 
 export default function App() {
   return (
@@ -12,7 +14,16 @@ export default function App() {
         <AuthorizedUserIdContextProvider>
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Layout />}></Route>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Navigate to="headphones" replace />} />
+                <Route path="headphones" element={<HeadphonesPageRedirect />}>
+                  <Route
+                    path=":headphoneId"
+                    element={<HeadphonesPage />}
+                  ></Route>
+                </Route>
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Route>
             </Routes>
           </BrowserRouter>
         </AuthorizedUserIdContextProvider>

@@ -5,7 +5,7 @@
 
   /* Цвета layout (header, main, footer) */
   --light-main-bg: #f8f9fa;
-  --dark-main-bg: #1e1e1e;
+  --dark-main-bg: hsl(0, 0%, 12%);
 
   /* Цвета секций внутри layout */
   --light-section-bg: #ffffff;
@@ -56,4 +56,8 @@
 
   /* Размер шрифта кнопки */
   --btn-font-size: 1rem; /* 16px */
+
+  /* Цвета спиннера */
+  --light-spinner-border-color: #cccccc;
+  --dark-spinner-border-color: #666666;
 }
