@@ -3,6 +3,7 @@ import { useThemeColorContext } from "../themeColorContextProvider/ThemeColorCon
 import styles from "./Main.module.css";
 import classNames from "classnames";
 import { useMainMinHeight } from "../../hooks/useMainMinHeight";
+import { Outlet } from "react-router-dom";
 
 export default function Main() {
   const mainRef = useRef<HTMLElement>(null!);
@@ -15,6 +16,8 @@ export default function Main() {
     <main
       ref={mainRef}
       className={classNames(styles.main, styles[`main--${themeColor}`])}
-    ></main>
+    >
+      <Outlet />
+    </main>
   );
 }

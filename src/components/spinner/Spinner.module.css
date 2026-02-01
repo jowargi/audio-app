@@ -1,0 +1,33 @@
+.spinner-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-inner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+
+.spinner-inner--light {
+  border-left-color: var(--light-spinner-border-color);
+  border-top-color: var(--light-spinner-border-color);
+}
+
+.spinner-inner--dark {
+  border-left-color: var(--dark-spinner-border-color);
+  border-top-color: var(--dark-spinner-border-color);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.container--light {
+  border-color: var(--light-border-color);
+  background-color: var(--light-section-bg);
+}
+
+.container--dark {
+  border-color: var(--dark-border-color);
+  background-color: var(--dark-section-bg);
+}
+
+.name {
+  font-size: var(--h2-font-size);
+}
+
+.name--light {
+  color: var(--light-heading-color);
+}
+
+.name--dark {
+  color: var(--dark-heading-color);
+}
+
+.message {
+  font-size: var(--p-font-size);
+}
+
+.message--light {
+  color: var(--light-text-color);
+}
+
+.message--dark {
+  color: var(--dark-text-color);
+}
