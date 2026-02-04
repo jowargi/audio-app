@@ -6,6 +6,7 @@ import AuthorizedUserIdContextProvider from "../authorizedUserIdContextProvider/
 import ThemeColorContextProvider from "../themeColorContextProvider/ThemeColorContextProvider";
 import HeadphonesPageRedirect from "../../redirects/HeadphonesPageRedirect";
 import HeadphonesPage from "../../pages/headphones/HeadphonesPage";
+import InfoPageContainer from "../../pages/info/InfoPageContainer";
 
 export default function App() {
   return (
@@ -17,10 +18,12 @@ export default function App() {
               <Route path="/" element={<Layout />}>
                 <Route index element={<Navigate to="headphones" replace />} />
                 <Route path="headphones" element={<HeadphonesPageRedirect />}>
-                  <Route
-                    path=":headphoneId"
-                    element={<HeadphonesPage />}
-                  ></Route>
+                  <Route path=":headphoneId" element={<HeadphonesPage />}>
+                    <Route index element={<Navigate to="info" replace />} />
+                    <Route path="info" element={<InfoPageContainer />} />
+                    <Route path="reviews" element={null} />
+                    <Route path="*" element={<Navigate to="info" replace />} />
+                  </Route>
                 </Route>
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Route>

@@ -60,4 +60,27 @@
   /* Цвета спиннера */
   --light-spinner-border-color: #cccccc;
   --dark-spinner-border-color: #666666;
+
+  /* Цвета ссылок */
+  --light-link-bg: #007bff;
+  --dark-link-bg: #1a6bc4;
+
+  --light-link-color: #ffffff;
+  --dark-link-color: #f0f0f0;
+
+  --light-link-border-color: #007bff;
+  --dark-link-border-color: #1a6bc4;
+
+  /* Цвета ссылок (дополнительные) */
+  --light-active-link-bg: #cccccc;
+  --dark-active-link-bg: #555555;
+
+  --light-active-link-color: #666666;
+  --dark-active-link-color: #888888;
+
+  --light-active-link-border-color: #aaaaaa;
+  --dark-active-link-border-color: #666666;
+
+  /* Размер шрифта ссылки */
+  --link-font-size: 1rem; /* 16px */
 }
