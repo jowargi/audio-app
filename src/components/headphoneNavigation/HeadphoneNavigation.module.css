@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  margin-bottom: 1rem;
+}
+
+.list--light {
+  border-color: var(--light-border-color);
+}
+
+.list--dark {
+  border-color: var(--dark-border-color);
+}

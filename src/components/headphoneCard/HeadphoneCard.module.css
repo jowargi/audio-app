@@ -1,0 +1,26 @@
+.container {
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.container--light {
+  border-color: var(--light-border-color);
+}
+
+.container--dark {
+  border-color: var(--dark-border-color);
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: var(--h3-font-size);
+}
+
+.title--light {
+  color: var(--light-heading-color);
+}
+
+.title--dark {
+  color: var(--dark-heading-color);
+}
