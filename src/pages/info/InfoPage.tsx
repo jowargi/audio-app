@@ -3,6 +3,7 @@ import type { Headphone } from "../../redux/slices/headphones/slice";
 import { useThemeColorContext } from "../../components/themeColorContextProvider/ThemeColorContextProvider";
 import styles from "./InfoPage.module.css";
 import classNames from "classnames";
+import CodecsContainer from "../../components/codecs/CodecsContainer";
 
 interface InfoPageProps {
   headphoneName?: Headphone["name"];
@@ -69,6 +70,7 @@ export default function InfoPage({
           ),
         )}
       </ul>
+      <CodecsContainer />
     </div>
   );
 }

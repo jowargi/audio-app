@@ -1,0 +1,12 @@
+.text {
+  text-align: center;
+  font-size: var(--p-font-size);
+}
+
+.text--light {
+  color: var(--light-text-color);
+}
+
+.text--dark {
+  color: var(--dark-text-color);
+}
