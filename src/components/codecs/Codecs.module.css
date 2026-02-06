@@ -1,0 +1,38 @@
+.container {
+  padding: 1rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: var(--h5-font-size);
+}
+
+.title--light {
+  color: var(--light-heading-color);
+}
+
+.title--dark {
+  color: var(--dark-heading-color);
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1%;
+}
+
+.item {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.item--light {
+  border-color: var(--light-border-color);
+}
+
+.item--dark {
+  border-color: var(--dark-border-color);
+}
