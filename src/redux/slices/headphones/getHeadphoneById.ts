@@ -4,7 +4,7 @@ import { HttpError } from "../../../errors/HttpError";
 import { APIError } from "../../../errors/APIError";
 import type { GlobalState } from "../../store";
 
-export const getHeadphoneById = createAsyncThunk<Headphone, string>(
+export const getHeadphoneById = createAsyncThunk<Headphone, Headphone["id"]>(
   "headphones/getHeadphoneById",
 
   async (id, { rejectWithValue, signal }) => {

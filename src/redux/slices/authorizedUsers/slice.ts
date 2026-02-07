@@ -14,8 +14,8 @@ export const usersArraySchema = z.array(userSchema);
 
 export type User = z.infer<typeof userSchema>;
 
-const authorizedUsersAdapter = createEntityAdapter<User, string>({
-  selectId: (user: User): string => user.id,
+const authorizedUsersAdapter = createEntityAdapter<User, User["id"]>({
+  selectId: (user: User): User["id"] => user.id,
 });
 
 export const authorizedUsersSlice = createSlice({
@@ -23,18 +23,15 @@ export const authorizedUsersSlice = createSlice({
   initialState: authorizedUsersAdapter.getInitialState(),
 
   reducers: {
-    addAuthorizedUser: (
-      state: EntityState<User, string>,
-      { payload }: { payload: User },
-    ): void => {
-      authorizedUsersAdapter.addOne(state, payload);
+    addAuthorizedUser: (state, { payload }) => {
+      authorizedUsersAdapter.addOne(state, payload as User);
     },
   },
 
   selectors: {
     selectAuthorizedUserById: (
-      state: EntityState<User, string>,
-      id: string | undefined,
+      state: EntityState<User, User["id"]>,
+      id: User["id"] | undefined,
     ): User | undefined => (id ? state.entities[id] : undefined),
   },
 });

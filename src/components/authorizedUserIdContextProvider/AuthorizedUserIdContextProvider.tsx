@@ -1,8 +1,9 @@
 import { createContext, useCallback, useContext, useState } from "react";
+import type { User } from "../../redux/slices/authorizedUsers/slice";
 
 interface AuthorizedUserIdContextValue {
-  authorizedUserId: string | undefined;
-  login: (userId: string) => void;
+  authorizedUserId: User["id"] | undefined;
+  login: (userId: User["id"]) => void;
   logout: () => void;
 }
 
@@ -10,7 +11,7 @@ const AuthorizedUserIdContext = createContext<AuthorizedUserIdContextValue>({
   authorizedUserId: undefined,
   login: (
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    _userId: string,
+    _userId: User["id"],
   ): void => undefined,
   logout: (): void => undefined,
 });
@@ -23,12 +24,12 @@ export default function AuthorizedUserIdContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [authorizedUserId, setAuthorizedUserId] = useState<string | undefined>(
-    undefined,
-  );
+  const [authorizedUserId, setAuthorizedUserId] = useState<
+    User["id"] | undefined
+  >(undefined);
 
   const login = useCallback(
-    (userId: string): void => setAuthorizedUserId(userId),
+    (userId: User["id"]): void => setAuthorizedUserId(userId),
     [],
   );
 

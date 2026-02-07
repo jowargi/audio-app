@@ -15,8 +15,8 @@ import styles from "./AuthStatusControlCompound.module.css";
 import classNames from "classnames";
 
 interface AuthStatusContextValue {
-  authorizedUserId: string | undefined;
-  login: (userId: string) => void;
+  authorizedUserId: User["id"] | undefined;
+  login: (userId: User["id"]) => void;
   logout: () => void;
 }
 
@@ -24,7 +24,7 @@ const AuthStatusContext = createContext<AuthStatusContextValue>({
   authorizedUserId: undefined,
   login: (
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    _userId: string,
+    _userId: User["id"],
   ): void => undefined,
   logout: (): void => undefined,
 });
@@ -66,7 +66,7 @@ AuthStatusControlCompound.UserName = function UserName() {
 
   return (
     <p className={classNames(styles.name, styles[`name--${themeColor}`])}>
-      {authorizedUser ? authorizedUser.name : "Guest"}
+      {authorizedUser?.name || "Guest"}
     </p>
   );
 };

@@ -13,10 +13,10 @@ interface InfoPageProps {
 }
 
 interface HeadphoneInfo {
-  Name: string | undefined;
-  Type: string | undefined;
-  "Max volume": string | undefined;
-  Brand: string | undefined;
+  Name: Headphone["name"] | undefined;
+  Type: Headphone["type"] | undefined;
+  "Max volume": Headphone["maxVolume"] | undefined;
+  Brand: Headphone["brand"] | undefined;
 }
 
 export default function InfoPage({

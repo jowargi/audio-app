@@ -16,11 +16,12 @@ import {
 import ErrorFallback from "../errorFallback/ErrorFallback";
 import Codecs from "./Codecs";
 import Spinner from "../spinner/Spinner";
+import type { Headphone } from "../../redux/slices/headphones/slice";
 
 export default function CodecsContainer() {
   const { headphoneId } = useParams();
 
-  const requestStatus = useRequest<Codec[], string>({
+  const requestStatus = useRequest<Codec[], Headphone["id"]>({
     thunk: getCodecsByHeadphoneId,
     thunkArg: headphoneId,
   });
