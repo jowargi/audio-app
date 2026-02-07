@@ -29,10 +29,11 @@ interface AdditionalState {
   fetchByIdError: FetchError;
 }
 
-type HeadphonesState = EntityState<Headphone, string> & AdditionalState;
+type HeadphonesState = EntityState<Headphone, Headphone["id"]> &
+  AdditionalState;
 
-const headphonesAdapter = createEntityAdapter<Headphone, string>({
-  selectId: (headphone: Headphone): string => headphone.id,
+const headphonesAdapter = createEntityAdapter<Headphone, Headphone["id"]>({
+  selectId: (headphone: Headphone): Headphone["id"] => headphone.id,
 });
 
 const initialState: HeadphonesState = {
@@ -89,7 +90,7 @@ export const headphonesSlice = createSlice({
   selectors: {
     selectHeadphoneById: (
       state: HeadphonesState,
-      id: string | undefined,
+      id: Headphone["id"] | undefined,
     ): Headphone | undefined => (id ? state.entities[id] : undefined),
 
     selectFetchAllError: (state: HeadphonesState): FetchError =>
