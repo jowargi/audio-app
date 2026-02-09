@@ -3,6 +3,7 @@ import { authorizedUsersSlice } from "./slices/authorizedUsers/slice";
 import { headphonesSlice } from "./slices/headphones/slice";
 import { requestsSlice } from "./slices/requests/slice";
 import { codecsSlice } from "./slices/codecs/slice";
+import { cartSlice } from "./cart/slice";
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     [authorizedUsersSlice.name]: authorizedUsersSlice.reducer,
     [headphonesSlice.name]: headphonesSlice.reducer,
     [codecsSlice.name]: codecsSlice.reducer,
+    [cartSlice.name]: cartSlice.reducer,
   },
 
   middleware: (getDefaultMiddleware) =>

@@ -4,6 +4,7 @@ import HeadphoneNavigation from "../headphoneNavigation/HeadphoneNavigation";
 import { useThemeColorContext } from "../themeColorContextProvider/ThemeColorContextProvider";
 import styles from "./HeadphoneCard.module.css";
 import classNames from "classnames";
+import AddToCartButton from "../addToCartButton/AddToCartButton";
 
 export default function HeadphoneCard({
   headphoneName,
@@ -24,6 +25,7 @@ export default function HeadphoneCard({
       </h3>
       <HeadphoneNavigation />
       <Outlet />
+      <AddToCartButton />
     </div>
   );
 }
