@@ -7,7 +7,7 @@ import { useAuthorizedUserIdContext } from "../components/authorizedUserIdContex
 import { useSelector } from "react-redux";
 import type { GlobalState } from "../redux/store";
 
-interface AuthorizedComponentProps {
+export interface AuthorizedComponentProps {
   authorizedUser: User;
 }
 

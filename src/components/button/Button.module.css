@@ -1,4 +1,5 @@
 .button {
+  width: fit-content;
   padding: 0.5rem;
   border-width: 1px;
   border-style: solid;
