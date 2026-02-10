@@ -10,8 +10,8 @@ interface ThemeColorContextValue {
 
 const ThemeColorContext = createContext<ThemeColorContextValue>({
   themeColor: "light",
-  setLightTheme: (): void => undefined,
-  setDarkTheme: (): void => undefined,
+  setLightTheme: (): void => {},
+  setDarkTheme: (): void => {},
 });
 
 export const useThemeColorContext = (): ThemeColorContextValue =>

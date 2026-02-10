@@ -1,0 +1,31 @@
+.container {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.container--light {
+  border-color: var(--light-border-color);
+  background-color: var(--light-section-bg);
+}
+
+.container--dark {
+  border-color: var(--dark-border-color);
+  background-color: var(--dark-section-bg);
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-size: var(--h2-font-size);
+}
+
+.title--light {
+  color: var(--light-heading-color);
+}
+
+.title--dark {
+  color: var(--dark-heading-color);
+}

@@ -7,28 +7,34 @@ import ThemeColorContextProvider from "../themeColorContextProvider/ThemeColorCo
 import HeadphonesPageRedirect from "../../redirects/HeadphonesPageRedirect";
 import HeadphonesPage from "../../pages/headphones/HeadphonesPage";
 import InfoPageContainer from "../../pages/info/InfoPageContainer";
+import CartContextProvider from "../cartContextProvider/CartContextProvider";
 
 export default function App() {
   return (
     <Provider store={store}>
       <ThemeColorContextProvider>
         <AuthorizedUserIdContextProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Layout />}>
-                <Route index element={<Navigate to="headphones" replace />} />
-                <Route path="headphones" element={<HeadphonesPageRedirect />}>
-                  <Route path=":headphoneId" element={<HeadphonesPage />}>
-                    <Route index element={<Navigate to="info" replace />} />
-                    <Route path="info" element={<InfoPageContainer />} />
-                    <Route path="reviews" element={null} />
-                    <Route path="*" element={<Navigate to="info" replace />} />
+          <CartContextProvider>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Layout />}>
+                  <Route index element={<Navigate to="headphones" replace />} />
+                  <Route path="headphones" element={<HeadphonesPageRedirect />}>
+                    <Route path=":headphoneId" element={<HeadphonesPage />}>
+                      <Route index element={<Navigate to="info" replace />} />
+                      <Route path="info" element={<InfoPageContainer />} />
+                      <Route path="reviews" element={null} />
+                      <Route
+                        path="*"
+                        element={<Navigate to="info" replace />}
+                      />
+                    </Route>
                   </Route>
+                  <Route path="*" element={<Navigate to="/" replace />} />
                 </Route>
-                <Route path="*" element={<Navigate to="/" replace />} />
-              </Route>
-            </Routes>
-          </BrowserRouter>
+              </Routes>
+            </BrowserRouter>
+          </CartContextProvider>
         </AuthorizedUserIdContextProvider>
       </ThemeColorContextProvider>
     </Provider>

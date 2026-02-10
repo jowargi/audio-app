@@ -12,8 +12,8 @@ const AuthorizedUserIdContext = createContext<AuthorizedUserIdContextValue>({
   login: (
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _userId: User["id"],
-  ): void => undefined,
-  logout: (): void => undefined,
+  ): void => {},
+  logout: (): void => {},
 });
 
 export const useAuthorizedUserIdContext = (): AuthorizedUserIdContextValue =>
