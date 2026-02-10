@@ -16,6 +16,7 @@ export const headphoneSchema = z.object({
   brand: z.string(),
   reviews: z.array(z.string()),
   codecs: z.array(z.string()),
+  img: z.string(),
 });
 
 export const headphonesArraySchema = z.array(headphoneSchema);
