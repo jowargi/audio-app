@@ -5,6 +5,7 @@ import ThemeColorToggle from "../themeColorToggle/ThemeColorToggle";
 import styles from "./Header.module.css";
 import classNames from "classnames";
 import { useThemeColorContext } from "../themeColorContextProvider/ThemeColorContextProvider";
+import CartToggle from "../cartToggle/CartToggle";
 
 const AuthStatusControl = () => {
   return (
@@ -46,6 +47,7 @@ export default function Header() {
         Audio App
       </h1>
       <div className={styles.container}>
+        <CartToggle />
         <AuthStatusControl />
         <ThemeColorToggle />
       </div>
