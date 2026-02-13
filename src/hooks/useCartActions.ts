@@ -6,7 +6,7 @@ import {
   addToCart,
   removeFromCart,
   selectUserCartItemQuantity,
-} from "../redux/cart/slice";
+} from "../redux/slices/cart/slice";
 import { useCallback } from "react";
 
 interface UseCartActionsParams {

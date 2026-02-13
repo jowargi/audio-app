@@ -4,6 +4,7 @@ import { useThemeColorContext } from "../../components/themeColorContextProvider
 import styles from "./InfoPage.module.css";
 import classNames from "classnames";
 import CodecsContainer from "../../components/codecs/CodecsContainer";
+import HeadphonePictureContainer from "../../components/headphonePicture/HeadphonePictureContainer";
 
 interface InfoPageProps {
   headphoneName?: Headphone["name"];
@@ -47,29 +48,35 @@ export default function InfoPage({
       <h4 className={classNames(styles.title, styles[`title--${themeColor}`])}>
         {headphoneName || "Headphone"} characteristics
       </h4>
-      <ul className={styles.list}>
-        {Object.entries(headphoneInfo).map(
-          (
-            [infoKey, infoValue]: [string, string | undefined],
-            index: number,
-          ): JSX.Element => (
-            <li
-              key={index}
-              className={classNames(styles.item, styles[`item--${themeColor}`])}
-            >
-              <p
+      <div className={styles.info}>
+        <ul className={styles.list}>
+          {Object.entries(headphoneInfo).map(
+            (
+              [infoKey, infoValue]: [string, string | undefined],
+              index: number,
+            ): JSX.Element => (
+              <li
+                key={index}
                 className={classNames(
-                  styles.text,
-                  styles[`text--${themeColor}`],
+                  styles.item,
+                  styles[`item--${themeColor}`],
                 )}
               >
-                <span className={styles.key}>{infoKey}</span>:{" "}
-                <span className={styles.value}>{infoValue || "-"}</span>
-              </p>
-            </li>
-          ),
-        )}
-      </ul>
+                <p
+                  className={classNames(
+                    styles.text,
+                    styles[`text--${themeColor}`],
+                  )}
+                >
+                  <span className={styles.key}>{infoKey}</span>:{" "}
+                  <span className={styles.value}>{infoValue || "-"}</span>
+                </p>
+              </li>
+            ),
+          )}
+        </ul>
+        <HeadphonePictureContainer />
+      </div>
       <CodecsContainer />
     </div>
   );
