@@ -1,8 +1,8 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
-import type { User } from "../slices/authorizedUsers/slice";
-import type { Headphone } from "../slices/headphones/slice";
+import type { User } from "../authorizedUsers/slice";
+import type { Headphone } from "../headphones/slice";
 import type { Action } from "@reduxjs/toolkit";
-import type { GlobalState } from "../store";
+import type { GlobalState } from "../../store";
 
 interface CartState {
   byUserId: Record<User["id"], Record<Headphone["id"], number>>;

@@ -4,7 +4,7 @@ import {
   type AuthorizedComponentProps,
 } from "../../hocs/withAuthorized";
 import type { GlobalState } from "../../redux/store";
-import { selectUserCartItemsIds } from "../../redux/cart/slice";
+import { selectUserCartItemsIds } from "../../redux/slices/cart/slice";
 import type { Headphone } from "../../redux/slices/headphones/slice";
 import Cart from "./Cart";
 

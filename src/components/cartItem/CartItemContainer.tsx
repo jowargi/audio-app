@@ -9,7 +9,7 @@ import {
   type Headphone,
 } from "../../redux/slices/headphones/slice";
 import type { GlobalState } from "../../redux/store";
-import { selectUserCartItemQuantity } from "../../redux/cart/slice";
+import { selectUserCartItemQuantity } from "../../redux/slices/cart/slice";
 import { useRequest } from "../../redux/hooks/useRequest";
 import { getHeadphoneById } from "../../redux/slices/headphones/getHeadphoneById";
 import {
