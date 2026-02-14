@@ -14,9 +14,9 @@ import {
   REQUEST_STATUS_PENDING,
   REQUEST_STATUS_REJECTED,
 } from "../../redux/constants/requestStatuses";
-import Spinner from "../spinner/Spinner";
 import ErrorFallback from "../errorFallback/ErrorFallback";
 import HeadphonePicture from "./HeadphonePicture";
+import HeadphonePictureSkeleton from "../../skeletons/headphonePicture/headphonePictureSkeleton";
 
 export default function HeadphonePictureContainer() {
   const { headphoneId } = useParams();
@@ -35,7 +35,8 @@ export default function HeadphonePictureContainer() {
 
   if (requestStatus === REQUEST_STATUS_IDLE) return null;
 
-  if (requestStatus === REQUEST_STATUS_PENDING) return <Spinner />;
+  if (requestStatus === REQUEST_STATUS_PENDING)
+    return <HeadphonePictureSkeleton />;
 
   if (
     requestStatus === REQUEST_STATUS_REJECTED &&

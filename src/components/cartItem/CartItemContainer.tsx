@@ -17,9 +17,9 @@ import {
   REQUEST_STATUS_PENDING,
   REQUEST_STATUS_REJECTED,
 } from "../../redux/constants/requestStatuses";
-import Spinner from "../spinner/Spinner";
 import ErrorFallback from "../errorFallback/ErrorFallback";
 import CartItem from "./CartItem";
+import CartItemSkeleton from "../../skeletons/cartItem/CartItemSkeleton";
 
 interface CartItemContainerProps {
   cartItemId: Headphone["id"];
@@ -48,7 +48,8 @@ const CartItemContainerAuthorized = ({
 
   if (requestStatus === REQUEST_STATUS_IDLE) return null;
 
-  if (requestStatus === REQUEST_STATUS_PENDING) return <Spinner />;
+  if (requestStatus === REQUEST_STATUS_PENDING)
+    return <CartItemSkeleton cartItemId={cartItemId} />;
 
   if (
     requestStatus === REQUEST_STATUS_REJECTED &&

@@ -83,4 +83,16 @@
 
   /* Размер шрифта ссылки */
   --link-font-size: 1rem; /* 16px */
+
+  /* Цвета границ для изображений */
+  --light-img-border-color: #e0e0e0;
+  --dark-img-border-color: #4a4a4a;
+
+  /* Цвета внешнего скелетона */
+  --light-skeleton-outer-bg: #e2e5e8;
+  --dark-skeleton-outer-bg: #2a2f34;
+
+  /* Цвета внутреннего скелетона */
+  --light-skeleton-inner-bg: #f0f2f5;
+  --dark-skeleton-inner-bg: #3f464d;
 }

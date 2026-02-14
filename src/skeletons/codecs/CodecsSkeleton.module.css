@@ -1,0 +1,37 @@
+.container {
+  padding: 1rem;
+}
+
+.title {
+  width: 68px;
+  height: 27px;
+  margin-bottom: 1rem;
+}
+
+.title--light {
+  background-color: var(--light-skeleton-outer-bg);
+}
+
+.title--dark {
+  background-color: var(--dark-skeleton-outer-bg);
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1%;
+}
+
+.item {
+  flex-grow: 1;
+  height: 40px;
+}
+
+.item--light {
+  background-color: var(--light-skeleton-outer-bg);
+}
+
+.item--dark {
+  background-color: var(--dark-skeleton-outer-bg);
+}

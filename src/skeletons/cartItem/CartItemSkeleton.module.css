@@ -1,0 +1,25 @@
+.title {
+  width: 240px;
+  height: 38px;
+}
+
+.title--light {
+  background-color: var(--light-skeleton-outer-bg);
+}
+
+.title--dark {
+  background-color: var(--dark-skeleton-outer-bg);
+}
+
+.text {
+  width: 82px;
+  height: 22px;
+}
+
+.text--light {
+  background-color: var(--light-skeleton-outer-bg);
+}
+
+.text--dark {
+  background-color: var(--dark-skeleton-outer-bg);
+}
