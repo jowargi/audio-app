@@ -15,8 +15,8 @@ import {
 } from "../../redux/constants/requestStatuses";
 import ErrorFallback from "../errorFallback/ErrorFallback";
 import Codecs from "./Codecs";
-import Spinner from "../spinner/Spinner";
 import type { Headphone } from "../../redux/slices/headphones/slice";
+import CodecsSkeleton from "../../skeletons/codecs/CodecsSkeleton";
 
 export default function CodecsContainer() {
   const { headphoneId } = useParams();
@@ -35,7 +35,7 @@ export default function CodecsContainer() {
 
   if (requestStatus === REQUEST_STATUS_IDLE) return null;
 
-  if (requestStatus === REQUEST_STATUS_PENDING) return <Spinner />;
+  if (requestStatus === REQUEST_STATUS_PENDING) return <CodecsSkeleton />;
 
   if (
     requestStatus === REQUEST_STATUS_REJECTED &&

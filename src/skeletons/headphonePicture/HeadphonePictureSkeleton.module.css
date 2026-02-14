@@ -1,0 +1,14 @@
+.img {
+  display: block;
+  width: 250px;
+  height: 15rem;
+  border-radius: 5px;
+}
+
+.img--light {
+  background-color: var(--light-skeleton-outer-bg);
+}
+
+.img--dark {
+  background-color: var(--dark-skeleton-outer-bg);
+}

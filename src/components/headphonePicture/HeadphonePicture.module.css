@@ -8,9 +8,9 @@
 }
 
 .img--light {
-  border-color: var(--light-border-color);
+  border-color: var(--light-img-border-color);
 }
 
 .img--dark {
-  border-color: var(--dark-border-color);
+  border-color: var(--dark-img-border-color);
 }
