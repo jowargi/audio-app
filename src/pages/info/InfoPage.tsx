@@ -46,7 +46,7 @@ export default function InfoPage({
       )}
     >
       <h4 className={classNames(styles.title, styles[`title--${themeColor}`])}>
-        {headphoneName || "Headphone"} characteristics
+        {headphoneName ? `${headphoneName} characteristics` : "Characteristics"}
       </h4>
       <div className={styles.info}>
         <ul className={styles.list}>

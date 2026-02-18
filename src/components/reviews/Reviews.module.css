@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text {
+  font-size: var(--p-font-size);
+}
+
+.text--light {
+  color: var(--light-text-color);
+}
+
+.text--dark {
+  color: var(--dark-text-color);
+}

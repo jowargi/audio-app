@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.container--light {
+  background-color: var(--light-skeleton-outer-bg);
+}
+
+.container--dark {
+  background-color: var(--dark-skeleton-outer-bg);
+}
+
+.title {
+  width: 294px;
+  height: 33px;
+  margin: 0 auto;
+}
+
+.title--light {
+  background-color: var(--light-skeleton-inner-bg);
+}
+
+.title--dark {
+  background-color: var(--dark-skeleton-inner-bg);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item {
+  width: auto;
+  height: 91px;
+}
+
+.item--light {
+  background-color: var(--light-skeleton-inner-bg);
+}
+
+.item--dark {
+  background-color: var(--dark-skeleton-inner-bg);
+}

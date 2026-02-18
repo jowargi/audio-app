@@ -8,6 +8,7 @@ import HeadphonesPageRedirect from "../../redirects/HeadphonesPageRedirect";
 import HeadphonesPage from "../../pages/headphones/HeadphonesPage";
 import InfoPageContainer from "../../pages/info/InfoPageContainer";
 import CartContextProvider from "../cartContextProvider/CartContextProvider";
+import ReviewsPageContainer from "../../pages/reviews/ReviewsPageContainer";
 
 export default function App() {
   return (
@@ -23,7 +24,10 @@ export default function App() {
                     <Route path=":headphoneId" element={<HeadphonesPage />}>
                       <Route index element={<Navigate to="info" replace />} />
                       <Route path="info" element={<InfoPageContainer />} />
-                      <Route path="reviews" element={null} />
+                      <Route
+                        path="reviews"
+                        element={<ReviewsPageContainer />}
+                      />
                       <Route
                         path="*"
                         element={<Navigate to="info" replace />}

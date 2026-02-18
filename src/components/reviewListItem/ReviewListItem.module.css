@@ -1,0 +1,16 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.item--light {
+  border-color: var(--light-border-color);
+}
+
+.item--dark {
+  border-color: var(--dark-border-color);
+}

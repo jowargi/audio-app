@@ -1,0 +1,12 @@
+.title {
+  margin-bottom: 0.5rem;
+  font-size: var(--h5-font-size);
+}
+
+.title--light {
+  color: var(--light-heading-color);
+}
+
+.title--dark {
+  color: var(--dark-heading-color);
+}
