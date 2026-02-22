@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.text {
+  font-size: var(--p-font-size);
+}
+
+.text--light {
+  color: var(--light-text-color);
+}
+
+.text--dark {
+  color: var(--dark-text-color);
+}

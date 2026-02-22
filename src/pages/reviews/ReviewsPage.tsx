@@ -1,3 +1,4 @@
+import ReviewFormContainer from "../../components/reviewForm/ReviewFormContainer";
 import ReviewsContainer from "../../components/reviews/ReviewsContainer";
 import { useThemeColorContext } from "../../components/themeColorContextProvider/ThemeColorContextProvider";
 import type { Headphone } from "../../redux/slices/headphones/slice";
@@ -22,6 +23,7 @@ export default function ReviewsPage({
         {headphoneName ? `${headphoneName} reviews` : "Reviews"}
       </h4>
       <ReviewsContainer />
+      <ReviewFormContainer />
     </div>
   );
 }

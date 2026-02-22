@@ -5,7 +5,7 @@ import classNames from "classnames";
 interface ButtonProps {
   children: React.ReactNode;
   type?: "submit" | "reset" | "button" | undefined;
-  onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   style?: React.CSSProperties | undefined;
   disabled?: boolean | undefined;
 }
