@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: var(--p-font-size);
+}
+
+.label--light {
+  color: var(--light-text-color);
+}
+
+.label--dark {
+  color: var(--dark-text-color);
+}
+
+.textarea {
+  resize: none;
+  width: 60%;
+  height: 10rem;
+  padding: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+}
+
+.textarea--light {
+  border-color: var(--light-textarea-border-color);
+  background-color: var(--light-textarea-bg);
+  color: var(--light-textarea-text-color);
+}
+
+.textarea--dark {
+  border-color: var(--dark-textarea-border-color);
+  background-color: var(--dark-textarea-bg);
+  color: var(--dark-textarea-text-color);
+}

@@ -5,6 +5,7 @@ import styles from "./InfoPage.module.css";
 import classNames from "classnames";
 import CodecsContainer from "../../components/codecs/CodecsContainer";
 import HeadphonePictureContainer from "../../components/headphonePicture/HeadphonePictureContainer";
+import AddToCartButton from "../../components/addToCartButton/AddToCartButton";
 
 interface InfoPageProps {
   headphoneName?: Headphone["name"];
@@ -78,6 +79,7 @@ export default function InfoPage({
         <HeadphonePictureContainer />
       </div>
       <CodecsContainer />
+      <AddToCartButton />
     </div>
   );
 }

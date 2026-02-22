@@ -95,4 +95,14 @@
   /* Цвета внутреннего скелетона */
   --light-skeleton-inner-bg: #f0f2f5;
   --dark-skeleton-inner-bg: #3f464d;
+
+  /* Цвета textarea */
+  --light-textarea-bg: #ffffff;
+  --dark-textarea-bg: #2d2d2d;
+
+  --light-textarea-text-color: #333333;
+  --dark-textarea-text-color: #e0e0e0;
+
+  --light-textarea-border-color: #dddddd;
+  --dark-textarea-border-color: #444444;
 }
