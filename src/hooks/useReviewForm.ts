@@ -14,7 +14,7 @@ export interface FormState {
   rating: Review["rating"];
 }
 
-export interface UseReviewFormReturn {
+interface UseReviewFormReturn {
   formState: FormState;
   setText: (text: FormState["text"]) => void;
   incrementRating: () => void;

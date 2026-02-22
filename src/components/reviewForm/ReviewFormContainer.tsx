@@ -1,46 +1,15 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  type FormEvent,
-  type FormEventHandler,
-  type MouseEventHandler,
-} from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import {
   withAuthorized,
   type AuthorizedComponentProps,
 } from "../../hocs/withAuthorized";
-import { useReviewForm, type FormState } from "../../hooks/useReviewForm";
+import { useReviewForm } from "../../hooks/useReviewForm";
 import { useAddReviewByHeadphoneIdMutation } from "../../redux/api/reviews/api";
 import ErrorFallback from "../errorFallback/ErrorFallback";
 import { useParams } from "react-router-dom";
 import { useTimeout } from "../../hooks/useTimeout";
 import type { Headphone } from "../../redux/slices/headphones/slice";
 import ReviewForm from "./ReviewForm";
-
-interface ReviewFormContextValue {
-  formState: FormState;
-  setText: (text: string) => void;
-  incrementRating: () => void;
-  decrementRating: () => void;
-  onSubmit: FormEventHandler<HTMLFormElement> | undefined;
-  onClear: MouseEventHandler<HTMLButtonElement> | undefined;
-  disabled: boolean | undefined;
-}
-
-const ReviewFormContext = createContext<ReviewFormContextValue>({
-  formState: { text: "", rating: 1 },
-  setText: (_text: string): void => {}, // eslint-disable-line @typescript-eslint/no-unused-vars
-  incrementRating: (): void => {},
-  decrementRating: (): void => {},
-  onSubmit: undefined,
-  onClear: undefined,
-  disabled: undefined,
-});
-
-export const useReviewFormContext = (): ReviewFormContextValue =>
-  useContext(ReviewFormContext);
 
 const ReviewFormContainerAuthorized = ({
   authorizedUser,
@@ -99,19 +68,15 @@ const ReviewFormContainerAuthorized = ({
   };
 
   return (
-    <ReviewFormContext.Provider
-      value={{
-        formState,
-        setText,
-        incrementRating,
-        decrementRating,
-        onSubmit,
-        onClear: clear,
-        disabled: isLoading || isSubmitting,
-      }}
-    >
-      <ReviewForm />
-    </ReviewFormContext.Provider>
+    <ReviewForm
+      formState={formState}
+      setText={setText}
+      incrementRating={incrementRating}
+      decrementRating={decrementRating}
+      onSubmit={onSubmit}
+      onClear={clear}
+      disabled={isLoading || isSubmitting}
+    />
   );
 };
 
