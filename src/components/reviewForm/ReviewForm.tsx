@@ -12,7 +12,7 @@ import RatingCounter from "../ratingCounter/RatingCounter";
 import FormControls from "../formControls/FormControls";
 import type { FormState } from "../../hooks/useReviewForm";
 
-interface ReviewFormProps {
+export interface ReviewFormProps {
   formState: FormState;
   setText: (text: string) => void;
   incrementRating: MouseEventHandler<HTMLButtonElement> | undefined;

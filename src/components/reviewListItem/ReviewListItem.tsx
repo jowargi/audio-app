@@ -1,4 +1,4 @@
-import ReviewListItemContent from "../reviewListItemContent/ReviewListItemContent";
+import EditableReview from "../editableReview/EditableReview";
 import { useThemeColorContext } from "../themeColorContextProvider/ThemeColorContextProvider";
 import styles from "./ReviewListItem.module.css";
 import classNames from "classnames";
@@ -8,7 +8,7 @@ export default function ReviewListItem() {
 
   return (
     <li className={classNames(styles.item, styles[`item--${themeColor}`])}>
-      <ReviewListItemContent />
+      <EditableReview />
     </li>
   );
 }
