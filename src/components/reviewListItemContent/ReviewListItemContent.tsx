@@ -1,12 +1,20 @@
-import { useReviewContentContext } from "../reviewListItem/ReviewListItemContainer";
+import type { Review } from "../../redux/api/reviews/api";
 import { useThemeColorContext } from "../themeColorContextProvider/ThemeColorContextProvider";
 import UserCardContainer from "../userCard/UserCardContainer";
 import styles from "./ReviewListItemContent.module.css";
 import classNames from "classnames";
 
-export default function ReviewListItemContent() {
-  const { userId, reviewText, reviewRating } = useReviewContentContext();
+export interface ReviewListItemContentProps {
+  userId: Review["user"] | undefined;
+  reviewText: Review["text"] | undefined;
+  reviewRating: Review["rating"] | undefined;
+}
 
+export default function ReviewListItemContent({
+  userId,
+  reviewText,
+  reviewRating,
+}: ReviewListItemContentProps) {
   const { themeColor } = useThemeColorContext();
 
   return (

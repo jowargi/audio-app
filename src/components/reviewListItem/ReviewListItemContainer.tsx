@@ -8,12 +8,14 @@ import { createContext, useContext } from "react";
 import ReviewListItem from "./ReviewListItem";
 
 interface ReviewContentContextValue {
+  reviewId: Review["id"] | undefined;
   userId: Review["user"] | undefined;
   reviewText: Review["text"] | undefined;
   reviewRating: Review["rating"] | undefined;
 }
 
 const ReviewContentContext = createContext<ReviewContentContextValue>({
+  reviewId: undefined,
   userId: undefined,
   reviewText: undefined,
   reviewRating: undefined,
@@ -43,8 +45,10 @@ export default function ReviewListItemContainer({
 
   const { user: userId, text: reviewText, rating: reviewRating } = review || {};
 
-  return userId && reviewText && reviewRating ? (
-    <ReviewContentContext.Provider value={{ userId, reviewText, reviewRating }}>
+  return reviewId && userId && reviewText && reviewRating ? (
+    <ReviewContentContext.Provider
+      value={{ reviewId, userId, reviewText, reviewRating }}
+    >
       <ReviewListItem />
     </ReviewContentContext.Provider>
   ) : null;
