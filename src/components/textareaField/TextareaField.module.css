@@ -37,3 +37,9 @@
   background-color: var(--dark-textarea-bg);
   color: var(--dark-textarea-text-color);
 }
+
+@media (max-width: 768px) {
+  .textarea {
+    width: 100%;
+  }
+}

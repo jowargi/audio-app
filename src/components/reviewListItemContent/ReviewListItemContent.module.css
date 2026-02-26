@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .text {
   font-size: var(--p-font-size);
 }
@@ -27,4 +33,13 @@
 
 .rating--dark {
   color: var(--dark-text-color);
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }

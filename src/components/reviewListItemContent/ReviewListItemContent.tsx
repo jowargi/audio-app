@@ -19,7 +19,7 @@ export default function ReviewListItemContent({
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.content}>
         <UserCardContainer userId={userId} />
         <p className={classNames(styles.text, styles[`text--${themeColor}`])}>
           {reviewText}

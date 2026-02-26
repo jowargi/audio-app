@@ -40,7 +40,5 @@ export default function HeadphonesPageRedirect() {
 
   if (headphoneId) return <Outlet />;
 
-  console.log(headphonesIds);
-
   return <Navigate to={`/headphones/${headphonesIds[0]}`} replace />;
 }
