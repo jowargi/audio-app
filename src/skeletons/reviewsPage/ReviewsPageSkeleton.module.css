@@ -47,3 +47,9 @@
 .item--dark {
   background-color: var(--dark-skeleton-outer-bg);
 }
+
+@media (max-width: 480px) {
+  .item {
+    height: 143px;
+  }
+}

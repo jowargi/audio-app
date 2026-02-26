@@ -1,11 +1,12 @@
 .container {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .title {
   width: 68px;
   height: 27px;
-  margin-bottom: 1rem;
 }
 
 .title--light {

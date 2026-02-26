@@ -81,3 +81,12 @@
 .value {
   font-weight: 300;
 }
+
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+}
