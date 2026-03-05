@@ -1,21 +1,17 @@
-import {
-  useCallback,
-  useEffect,
-  type PointerEvent,
-  type RefObject,
-} from "react";
+import { useCallback, useEffect, type RefObject } from "react";
 import { usePopup } from "./usePopup";
 import type { PopupRectState } from "./usePopupRect";
 import { HoverIntent } from "../hoverIntent/HoverIntent";
 
+interface UseHeadphoneLinkPopupReturn {
+  popupRectState: PopupRectState;
+  onPointerCancel: () => void;
+  onClick: () => void;
+}
+
 interface GetElementPageOffsetReturn {
   left: number;
   top: number;
-}
-
-interface UseHeadphonePicturePopupReturn {
-  popupRectState: PopupRectState;
-  onPointerCancel: (event: PointerEvent) => void;
 }
 
 const getElementPageOffset = (
@@ -29,27 +25,21 @@ const getElementPageOffset = (
   };
 };
 
-export const useHeadphonePicturePopup = (
-  imgRef: RefObject<HTMLImageElement>,
-): UseHeadphonePicturePopupReturn => {
+export const useHeadphoneLinkPopup = (
+  linkRef: RefObject<HTMLAnchorElement>,
+): UseHeadphoneLinkPopupReturn => {
   const { popupRectState, addPopup, removePopup } = usePopup();
 
-  const onPointerCancel = useCallback(
-    (event: PointerEvent): void => {
-      event.stopPropagation();
-
-      removePopup();
-    },
-    [removePopup],
-  );
+  const onPointerCancel = useCallback((): void => removePopup(), [removePopup]);
+  const onClick = useCallback((): void => removePopup(), [removePopup]);
 
   useEffect((): (() => void) => {
     const over = (): void => {
-      const target = imgRef.current;
+      const target = linkRef.current;
       const targetPageOffset = getElementPageOffset(target);
 
       const popupWidth =
-        10 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+        5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
       const popupLeft =
         targetPageOffset.left + target.offsetWidth / 2 - popupWidth / 2;
       const popupTop = targetPageOffset.top + target.offsetHeight + 5;
@@ -61,15 +51,16 @@ export const useHeadphonePicturePopup = (
       removePopup();
     };
 
-    const hoverIntent = new HoverIntent({ element: imgRef.current, over, out });
+    const hoverIntent = new HoverIntent({
+      element: linkRef.current,
+      over,
+      out,
+    });
 
     return (): void => {
       hoverIntent.destroy();
     };
-  }, [imgRef, addPopup, removePopup]);
+  }, [linkRef, addPopup, removePopup]);
 
-  return {
-    popupRectState,
-    onPointerCancel,
-  };
+  return { popupRectState, onPointerCancel, onClick };
 };

@@ -105,4 +105,15 @@
 
   --light-textarea-border-color: #dddddd;
   --dark-textarea-border-color: #444444;
+
+  /* Размер текста popup */
+  --popup-font-size: 0.875rem;
+
+  /* Цвета текста popup */
+  --light-popup-text-color: #ffffff;
+  --dark-popup-text-color: #f0f0f0;
+
+  /* Цвета фона popup */
+  --light-popup-bg: #007bff;
+  --dark-popup-bg: #1a6bc4;
 }

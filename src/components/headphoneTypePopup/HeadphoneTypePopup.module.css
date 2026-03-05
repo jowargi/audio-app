@@ -1,0 +1,27 @@
+.popup {
+  position: absolute;
+  z-index: 1000;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.popup--light {
+  background-color: var(--light-popup-bg);
+}
+
+.popup--dark {
+  background-color: var(--dark-popup-bg);
+}
+
+.text {
+  text-align: center;
+  font-size: var(--popup-font-size);
+}
+
+.text--light {
+  color: var(--light-popup-text-color);
+}
+
+.text--dark {
+  color: var(--dark-popup-text-color);
+}
