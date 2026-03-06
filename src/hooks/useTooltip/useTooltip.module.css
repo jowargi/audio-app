@@ -1,0 +1,18 @@
+.tooltip {
+  position: absolute;
+  z-index: 1000;
+  padding: 0.5rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: var(--tooltip-font-size);
+}
+
+.tooltip--light {
+  background-color: var(--light-tooltip-bg);
+  color: var(--light-tooltip-text-color);
+}
+
+.tooltip--dark {
+  background-color: var(--dark-tooltip-bg);
+  color: var(--dark-tooltip-text-color);
+}
