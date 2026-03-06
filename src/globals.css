@@ -116,4 +116,15 @@
   /* Цвета фона popup */
   --light-popup-bg: #007bff;
   --dark-popup-bg: #1a6bc4;
+
+  /* Размер текста tooltip */
+  --tooltip-font-size: 0.875rem;
+
+  /* Цвета текста tooltip */
+  --light-tooltip-text-color: #ffffff;
+  --dark-tooltip-text-color: #f0f0f0;
+
+  /* Цвета фона tooltip */
+  --light-tooltip-bg: #007bff;
+  --dark-tooltip-bg: #1a6bc4;
 }

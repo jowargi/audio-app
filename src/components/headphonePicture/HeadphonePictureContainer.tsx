@@ -16,7 +16,7 @@ import {
 } from "../../redux/constants/requestStatuses";
 import ErrorFallback from "../errorFallback/ErrorFallback";
 import HeadphonePicture from "./HeadphonePicture";
-import HeadphonePictureSkeleton from "../../skeletons/headphonePicture/headphonePictureSkeleton";
+import HeadphonePictureSkeleton from "../../skeletons/headphonePicture/HeadphonePictureSkeleton";
 
 export default function HeadphonePictureContainer() {
   const { headphoneId } = useParams();
