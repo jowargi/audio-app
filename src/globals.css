@@ -127,4 +127,8 @@
   /* Цвета фона tooltip */
   --light-tooltip-bg: #007bff;
   --dark-tooltip-bg: #1a6bc4;
+
+  /* Цвета фона scroll-progress */
+  --light-scroll-progress-bg: #007bff;
+  --dark-scroll-progress-bg: #1a6bc4;
 }
